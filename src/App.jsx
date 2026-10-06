@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
-import Carrusel from './components/Carrusel';
-import Categorias from './components/Categorias';
-import Productos from './components/Productos';
-import Registro from './components/Registro';
 import Footer from './components/Footer';
+
+import Home from './pages/Home';
+import ProductosPage from './pages/ProductosPage';
+import RegistroPage from './pages/RegistroPage';
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -16,10 +18,16 @@ function App() {
   return (
     <>
       <Navbar cantidadCarrito={carrito.length} />
-      <Carrusel />
-      <Categorias />
-      <Productos onAgregar={agregarAlCarrito} />
-      <Registro />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/productos"
+          element={<ProductosPage onAgregar={agregarAlCarrito} />}
+        />
+        <Route path="/registro" element={<RegistroPage />} />
+      </Routes>
+
       <Footer />
     </>
   );
