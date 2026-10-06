@@ -22,10 +22,10 @@ function NavbarPrincipal() {
             <Nav.Link as={NavLink} to="/productos">
               Productos
             </Nav.Link>
-
-            <Nav.Link as={NavLink} to="/productos">
-              Categorías
-            </Nav.Link>
+<Nav.Link as={NavLink} to="/categorias">
+  Categorías
+</Nav.Link>
+  
 
             <Nav.Link as={NavLink} to="/registro">
               Registro

@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import ProductosPage from './pages/ProductosPage';
 import RegistroPage from './pages/RegistroPage';
+import CategoriasPage from './pages/CategoriasPage';
 
 function App() {
   const [carrito, setCarrito] = useState([]);
@@ -25,6 +26,7 @@ function App() {
           path="/productos"
           element={<ProductosPage onAgregar={agregarAlCarrito} />}
         />
+        <Route path="/categorias" element={<CategoriasPage />} />
         <Route path="/registro" element={<RegistroPage />} />
       </Routes>
 
