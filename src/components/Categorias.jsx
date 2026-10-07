@@ -1,4 +1,3 @@
-import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,43 +7,44 @@ function Categorias() {
   const categorias = [
     {
       nombre: 'Almacén',
-      imagen: '/almacen.jpg',
+      imagen: 'https://placehold.co/600x400/198754/ffffff?text=Almacen',
     },
     {
       nombre: 'Lácteos',
-      imagen: '/lacteos.jpg',
+      imagen: 'https://placehold.co/600x400/0dcaf0/ffffff?text=Lacteos',
     },
     {
       nombre: 'Frutas y verduras',
-      imagen: '/frutas-y-verduras.jpg',
+      imagen: 'https://placehold.co/600x400/198754/ffffff?text=Frutas+y+verduras',
     },
     {
       nombre: 'Bebidas',
-      imagen: '/bebidas.jpg',
+      imagen: 'https://placehold.co/600x400/0d6efd/ffffff?text=Bebidas',
     },
   ];
 
   return (
-    <section id="categorias" className="py-5">
+    <section id="categorias" className="py-5 bg-light">
       <Container>
-        <h2 className="text-center mb-4">Categorías</h2>
+        <div className="text-center mb-5">
+          <span className="badge text-bg-success mb-2">
+            Explorá nuestros productos
+          </span>
 
-        <Row>
+          <h2 className="fw-bold">Categorías</h2>
+
+          <p className="text-secondary mb-0">
+            Encontrá todo lo que necesitás para tu compra.
+          </p>
+        </div>
+
+        <Row className="g-4">
           {categorias.map((categoria) => (
-            <Col md={3} sm={6} xs={12} key={categoria.nombre} className="mb-4">
-              <Card>
-                <Card.Img
-                  variant="top"
-                  src={categoria.imagen}
-                  alt={categoria.nombre}
-                />
-
-                <Card.Body>
-                  <Card.Title className="text-center">
-                    {categoria.nombre}
-                  </Card.Title>
-                </Card.Body>
-              </Card>
+            <Col key={categoria.nombre} xs={12} sm={6} lg={3}>
+              <CategoriaCard
+                nombre={categoria.nombre}
+                imagen={categoria.imagen}
+              />
             </Col>
           ))}
         </Row>
