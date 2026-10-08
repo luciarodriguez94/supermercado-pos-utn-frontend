@@ -2,13 +2,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 function Footer() {
   return (
-    <footer className="bg-dark text-light pt-5 pb-3">
+   <footer className="bg-success text-light pt-5 pb-3">
       <Container>
         <Row className="gy-4">
           <Col md={4}>
-            <h5 className="fw-bold">🛒 Supermercado Central</h5>
+            <h5 className="fw-bold">🛒 Punto Market </h5>
             <p className="small mb-0">
-              Tu supermercado online de confianza. Productos frescos y de
+              Todo lo que necesitás, en un solo lugar. Productos frescos y de
               calidad, con envío a domicilio.
             </p>
           </Col>
@@ -18,7 +18,7 @@ function Footer() {
             <ul className="list-unstyled small mb-0">
               <li>📍 San Miguel de Tucumán, Argentina</li>
               <li>📞 +54 9 381 000-0000</li>
-              <li>✉️ contacto@supermercadocentral.com</li>
+              <li>✉️ contacto@puntomarket.com</li>
               <li>🕒 Lunes a Sábado: 8:00 a 21:00</li>
             </ul>
           </Col>
@@ -35,7 +35,7 @@ function Footer() {
 
         <hr className="border-secondary mt-4" />
         <p className="text-center small mb-0">
-          © {new Date().getFullYear()} Supermercado Central. Todos los derechos reservados.
+          © {new Date().getFullYear()}© 2026 Punto Market. Todos los derechos reservados. 
         </p>
       </Container>
     </footer>

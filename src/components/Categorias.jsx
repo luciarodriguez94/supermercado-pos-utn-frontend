@@ -7,19 +7,19 @@ function Categorias() {
   const categorias = [
     {
       nombre: 'Almacén',
-      imagen: 'https://placehold.co/600x400/198754/ffffff?text=Almacen',
+      imagen: '/categoria-almacen.jpg',
     },
     {
       nombre: 'Lácteos',
-      imagen: 'https://placehold.co/600x400/0dcaf0/ffffff?text=Lacteos',
+      imagen: '/categoria-lacteos.jpg',
     },
     {
       nombre: 'Frutas y verduras',
-      imagen: 'https://placehold.co/600x400/198754/ffffff?text=Frutas+y+verduras',
+      imagen: '/categoria-frutas.jpg',
     },
     {
       nombre: 'Bebidas',
-      imagen: 'https://placehold.co/600x400/0d6efd/ffffff?text=Bebidas',
+      imagen: '/categoria-bebidas.jpg',
     },
   ];
 
