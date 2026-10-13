@@ -1,3 +1,4 @@
+
 import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
 
 const productos = [
@@ -18,7 +19,7 @@ const productos = [
   {
     id: 3,
     nombre: 'Manzanas rojas (kg)',
-    categoria: 'Frutas',
+    categoria: 'Frutas y verduras',
     precio: 2800,
     imagen: '/producto-manzanas.jpg',
   },
@@ -59,36 +60,82 @@ const productos = [
   },
 ];
 
-function Productos({ onAgregar = () => {} }) {
-  return (
-<section className="py-5 bg-light">
-  <Container id="productos">
-<h2 className="text-center fw-bold mb-4">
-  Nuestros productos
-</h2>
+function Productos({ onAgregar = () => {}, categoriaSeleccionada = '' }) {
+  const productosFiltrados = categoriaSeleccionada
+    ? productos.filter(
+        (producto) => producto.categoria === categoriaSeleccionada
+      )
+    : productos;
 
-      <Row xs={1} sm={2} lg={4} className="g-4">
-        {productos.map((producto) => (
-          <Col key={producto.id}>
-            <Card className="h-100 shadow-sm">
-              <Card.Img variant="top" src={producto.imagen} alt={producto.nombre} />
-              <Card.Body className="d-flex flex-column">
-                <Badge bg="success" className="align-self-start mb-2">
-                  {producto.categoria}
-                </Badge>
-                <Card.Title>{producto.nombre}</Card.Title>
-                <Card.Text className="fs-5 fw-bold text-success mt-auto">
-                  ${producto.precio.toLocaleString('es-AR')}
-                </Card.Text>
-                <Button variant="success" onClick={() => onAgregar(producto)}>
-                  Agregar al carrito
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+  return (
+    <section className="py-5 bg-light">
+      <Container id="productos">
+        <div className="text-center mb-5">
+          <span
+            className="badge rounded-pill px-4 py-2 mb-3"
+            style={{
+              backgroundColor: '#198754',
+              color: '#ffffff',
+              fontSize: '1rem',
+            }}
+          >
+            PUNTO MARKET
+          </span>
+
+          <h2
+            className="fw-bold mb-3"
+            style={{
+              color: '#146c43',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+            }}
+          >
+            Nuestros productos
+          </h2>
+
+          <div
+            className="mx-auto mb-3"
+            style={{
+              width: '90px',
+              height: '5px',
+              backgroundColor: '#ffc107',
+              borderRadius: '10px',
+            }}
+          />
+
+          <p className="text-secondary fs-5 mb-0">
+            Encontrá todo lo que necesitás para tu compra
+          </p>
+        </div>
+
+        <Row xs={1} sm={2} lg={4} className="g-4">
+          {productosFiltrados.map((producto) => (
+            <Col key={producto.id}>
+              <Card className="h-100 shadow-sm">
+                <Card.Img
+                  variant="top"
+                  src={producto.imagen}
+                  alt={producto.nombre}
+                />
+                <Card.Body className="d-flex flex-column">
+                  <Badge bg="success" className="align-self-start mb-2">
+                    {producto.categoria}
+                  </Badge>
+                  <Card.Title>{producto.nombre}</Card.Title>
+                  <Card.Text className="fs-5 fw-bold text-success mt-auto">
+                    ${producto.precio.toLocaleString('es-AR')}
+                  </Card.Text>
+                  <Button
+                    variant="success"
+                    onClick={() => onAgregar(producto)}
+                  >
+                    Agregar al carrito
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </section>
   );
 }

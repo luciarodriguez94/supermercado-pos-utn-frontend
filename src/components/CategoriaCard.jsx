@@ -22,7 +22,7 @@ function CategoriaCard({ nombre, imagen }) {
 
         <Button
           as={Link}
-          to="/productos"
+          to={`/productos?categoria=${encodeURIComponent(nombre)}`}
           variant="success"
           className="fw-semibold"
         >

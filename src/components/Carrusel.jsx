@@ -17,13 +17,13 @@ style={{
         />
 
         <Carousel.Caption className="bg-dark bg-opacity-50 rounded-3 p-3">
-          <Button
-            variant="warning"
-            href="/productos"
-            className="fw-bold"
-          >
-            Ver productos
-          </Button>
+        <Button
+  variant="warning"
+  onClick={() => (window.location.href = '/productos')}
+  className="fw-bold"
+>
+  Ver productos
+</Button> 
         </Carousel.Caption>
       </Carousel.Item>
 
@@ -78,13 +78,15 @@ style={{
         Encontrá frutas y verduras frescas todos los días.
       </p>
 
-      <Button
-        variant="warning"
-        href="/productos"
-        className="fw-bold"
-      >
-        Ver productos
-      </Button>
+   
+<Button
+  variant="warning"
+  onClick={() => (window.location.href = '/productos')}
+  className="fw-bold"
+>
+  Ver productos
+</Button>
+
     </div>
   </Carousel.Caption>
 </Carousel.Item>
