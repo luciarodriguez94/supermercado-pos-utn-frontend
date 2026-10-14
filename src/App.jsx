@@ -1,15 +1,36 @@
-import NavbarPrincipal from './components/Navbar';
-import Categorias from './components/Categorias';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+import Home from './pages/Home';
+import ProductosPage from './pages/ProductosPage';
+import RegistroPage from './pages/RegistroPage';
+import CategoriasPage from './pages/CategoriasPage';
 
 function App() {
+  const [carrito, setCarrito] = useState([]);
+
+  const agregarAlCarrito = (producto) => {
+    setCarrito((prev) => [...prev, producto]);
+  };
+
   return (
     <>
-      <NavbarPrincipal />
+      <Navbar cantidadCarrito={carrito.length} />
 
-      <div className="container text-center mt-5">
-        <h1>Supermercado</h1>
-        <p>Proyecto desarrollado con React + Vite</p>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/productos"
+          element={<ProductosPage onAgregar={agregarAlCarrito} />}
+        />
+        <Route path="/categorias" element={<CategoriasPage />} />
+        <Route path="/registro" element={<RegistroPage />} />
+      </Routes>
+
+      <Footer />
     </>
   );
 }
