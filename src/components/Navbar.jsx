@@ -42,12 +42,17 @@ function NavbarPrincipal({ cantidadCarrito = 0 }) {
               Registro
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/productos" className="fw-semibold">
-              🛒 Carrito{' '}
-              <Badge bg="warning" text="dark">
-                {cantidadCarrito}
-              </Badge>
-            </Nav.Link>
+           
+<Nav.Link as={NavLink} to="/carrito" className="fw-semibold">
+  🛒 Carrito{' '}
+  <Badge bg="warning" text="dark">
+    {cantidadCarrito}
+    <span className="visually-hidden">
+      unidades en el carrito
+    </span>
+  </Badge>
+</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
