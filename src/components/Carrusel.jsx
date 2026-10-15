@@ -4,10 +4,10 @@ import Button from 'react-bootstrap/Button';
 
 function Carrusel() {
   return (
-    <Carousel>
+    <Carousel className="carrusel-principal">
       <Carousel.Item>
         <img
-          className="d-block w-100 carrusel-imagen"
+          className="d-block w-100 carrusel-imagen carrusel-logo"
           src="/banner-inicio.png"
           alt="Punto Market - Todo lo que necesitás, en un solo lugar"
         />

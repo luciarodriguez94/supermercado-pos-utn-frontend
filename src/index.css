@@ -120,10 +120,25 @@ code {
   object-position: center;
 }
 
+.carrusel-logo {
+  object-fit: contain;
+  object-position: center;
+  background-color: transparent;
+
+}
+
+.carrusel-principal {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.carrusel-principal .carousel-inner {
+  margin-top: 0;
+}
+
 @media (max-width: 576px) {
   .carrusel-imagen {
     height: 300px;
-    object-position: center;
   }
 
   .carousel-caption {
