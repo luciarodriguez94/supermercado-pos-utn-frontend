@@ -40,3 +40,27 @@ src/
 ├── App.css
 ├── index.css
 └── main.jsx
+
+
+Estrategias SEO implementadas
+
+El proyecto Punto Market incorpora etiquetas SEO básicas para mejorar la identificación y presentación del sitio web en los motores de búsqueda.
+
+En el archivo index.html se incluyen:
+- Idioma (lang="es"): indica que el contenido está en español.
+- Título (title): identifica el sitio como Supermercado POS y menciona productos, ofertas y promociones.
+- Descripción (meta description): resume el contenido del supermercado online.
+- Palabras clave (meta keywords): incluye términos relacionados con supermercados, productos, ofertas y promociones.
+- Autor (meta author): identifica al equipo responsable del proyecto.
+- Robots (meta robots): establece las directivas index, follow para los motores de búsqueda.
+- Viewport (meta viewport): permite adaptar la visualización del sitio a diferentes tamaños de pantalla.
+
+Estas etiquetas se encuentran en el encabezado (head) del archivo index.html.
+
+
+
+
+
+
+
+
