@@ -52,8 +52,7 @@ function Promociones() {
                   variant="top"
                   src={promocion.imagen}
                   alt={`Oferta de ${promocion.nombre}`}
-                  className="w-100"
-                  style={{ objectFit: 'contain' }}
+                  className="w-100 promocion-imagen"
                 />
 
                 <Card.Body className="text-center">

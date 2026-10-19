@@ -1,3 +1,4 @@
+
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
@@ -9,10 +10,7 @@ function CategoriaCard({ nombre, imagen }) {
         variant="top"
         src={imagen}
         alt={nombre}
-        style={{
-          height: '200px',
-          objectFit: 'cover',
-        }}
+        className="categoria-imagen w-100"
       />
 
       <Card.Body className="text-center p-4">

@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import { Container, Row, Col, Card, Button, Badge, Spinner } from 'react-bootstrap';
 
 const API_URL = import.meta.env.VITE_API_URL;
+console.log("URL de la API:", API_URL);
 
 const productosLocales = [
   { id: 1, nombre: 'Leche entera 1L', categoria: 'Lácteos', precio: 1450, imagen: '/producto-leche.jpg' },

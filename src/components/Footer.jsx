@@ -35,7 +35,7 @@ function Footer() {
 
         <hr className="border-secondary mt-4" />
         <p className="text-center small mb-0">
-          © {new Date().getFullYear()}© 2026 Punto Market. Todos los derechos reservados. 
+          © {new Date().getFullYear()}  Punto Market. Todos los derechos reservados. 
         </p>
       </Container>
     </footer>

@@ -1,6 +1,8 @@
+
 import { Row, Col, Button, ListGroup } from 'react-bootstrap';
 
-const formatearPrecio = (valor) => `$${Number(valor).toLocaleString('es-AR')}`;
+const formatearPrecio = (valor) =>
+  `$${Number(valor).toLocaleString('es-AR')}`;
 
 function CarritoItem({ item, onCambiarCantidad, onQuitar }) {
   const subtotal = Number(item.precio) * item.cantidad;
@@ -12,8 +14,7 @@ function CarritoItem({ item, onCambiarCantidad, onQuitar }) {
           <img
             src={item.imagen}
             alt={item.nombre}
-            className="img-fluid rounded w-100"
-            style={{ maxHeight: '90px', objectFit: 'cover' }}
+            className="img-fluid rounded w-100 carrito-item-imagen"
           />
         </Col>
 
@@ -30,7 +31,9 @@ function CarritoItem({ item, onCambiarCantidad, onQuitar }) {
             size="sm"
             aria-label={`Restar una unidad de ${item.nombre}`}
             disabled={item.cantidad <= 1}
-            onClick={() => onCambiarCantidad(item.id, item.cantidad - 1)}
+            onClick={() =>
+              onCambiarCantidad(item.id, item.cantidad - 1)
+            }
           >
             −
           </Button>
@@ -43,14 +46,19 @@ function CarritoItem({ item, onCambiarCantidad, onQuitar }) {
             variant="outline-success"
             size="sm"
             aria-label={`Sumar una unidad de ${item.nombre}`}
-            onClick={() => onCambiarCantidad(item.id, item.cantidad + 1)}
+            onClick={() =>
+              onCambiarCantidad(item.id, item.cantidad + 1)
+            }
           >
             +
           </Button>
         </Col>
 
         <Col xs={5} md={3} className="text-end">
-          <p className="fw-bold text-success mb-2">{formatearPrecio(subtotal)}</p>
+          <p className="fw-bold text-success mb-2">
+            {formatearPrecio(subtotal)}
+          </p>
+
           <Button
             variant="outline-danger"
             size="sm"
