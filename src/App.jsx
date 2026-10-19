@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
 import { Routes, Route } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -12,7 +16,10 @@ import CarritoPage from './pages/CarritoPage';
 
 import useCarrito from './hooks/useCarrito';
 
+<<<<<<< HEAD
 // Aviso pequeño (toast) que aparece arriba a la derecha y se cierra solo.
+=======
+>>>>>>> dev
 const Toast = Swal.mixin({
   toast: true,
   position: 'top-end',
@@ -34,6 +41,10 @@ function App() {
 
   const handleAgregar = (producto) => {
     agregarProducto(producto);
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
     Toast.fire({
       icon: 'success',
       title: `${producto.nombre} agregado al carrito`,
@@ -49,12 +60,23 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
           <Route
             path="/productos"
             element={<ProductosPage onAgregar={handleAgregar} />}
           />
+<<<<<<< HEAD
           <Route path="/categorias" element={<CategoriasPage />} />
           <Route path="/registro" element={<RegistroPage />} />
+=======
+
+          <Route path="/categorias" element={<CategoriasPage />} />
+          <Route path="/registro" element={<RegistroPage />} />
+
+>>>>>>> dev
           <Route
             path="/carrito"
             element={
